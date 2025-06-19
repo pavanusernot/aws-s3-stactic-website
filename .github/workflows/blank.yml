@@ -1,0 +1,83 @@
+#<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to My Website</title>
+    <style>
+        body { font-family: Arial; background-color: #f2f2f2; text-align: center; padding-top: 100px; }
+        h1 { color: #333366; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Static Website Hosted on AWS S3</h1>
+    <p>This is a simple static website deployed using Amazon S3.</p>
+</body>
+</html>
+ This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+<!DOCTYPE html># AWS S3 Static Website Hosting
+
+This project demonstrates how to host a static website using **Amazon S3**.
+
+## Features
+- Simple `index.html` as homepage
+- Custom `error.html` for 404 errors
+- Publicly accessible via S3 website endpoint
+
+## Deployment Steps
+1. Create an S3 bucket
+2. Enable static website hosting
+3. Upload `index.html` and `error.html`
+4. Configure bucket policy for public access
+5. Test via S3 website endpoint
+
+---
+
+✅ Developed by **Battikala Pavan**
+
+<html>
+<head>
+    <title>404 Not Found</title>
+    <style>
+        body { font-family: Arial; background-color: #ffe6e6; text-align: center; padding-top: 100px; }
+        h1 { color: #cc0000; }
+    </style>
+</head>
+<body>
+    <h1>404 Error - Page Not Found</h1>
+    <p>The page you are looking for does not exist.</p>
+</body>
+</html>
